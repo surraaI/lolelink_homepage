@@ -43,9 +43,9 @@ const faqData = [
 
 export const FaqSection = (): JSX.Element => {
   return (
-    <section className="relative w-full bg-white py-[110px]">
-      <div className="max-w-[1280px] mx-auto px-20 flex gap-[55px]">
-        <div className="w-[425px] flex flex-col gap-3 translate-y-[-1rem] animate-fade-in opacity-0">
+    <section className="relative w-full bg-white py-12 md:py-20">
+      <div className="max-w-[1280px] mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row gap-8 md:gap-[55px]">
+        <div className="w-full md:w-[425px] flex flex-col gap-3 translate-y-[-1rem] animate-fade-in opacity-0">
           <div className="flex items-center gap-3 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms]">
             <div className="text-neutral-700 text-[length:var(--body-l-regular-font-size)] tracking-[var(--body-l-regular-letter-spacing)] leading-[var(--body-l-regular-line-height)] font-body-l-regular font-[number:var(--body-l-regular-font-weight)] [font-style:var(--body-l-regular-font-style)]">
               FAQ
@@ -57,11 +57,11 @@ export const FaqSection = (): JSX.Element => {
             />
           </div>
 
-          <h2 className="w-[425px] font-heading-h2 font-[number:var(--heading-h2-font-weight)] text-[#010509] text-[length:var(--heading-h2-font-size)] tracking-[var(--heading-h2-letter-spacing)] leading-[var(--heading-h2-line-height)] [font-style:var(--heading-h2-font-style)] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
+          <h2 className="w-full md:w-[425px] font-heading-h2 font-[number:var(--heading-h2-font-weight)] text-[#010509] text-[length:var(--heading-h2-font-size)] tracking-[var(--heading-h2-letter-spacing)] leading-[var(--heading-h2-line-height)] [font-style:var(--heading-h2-font-style)] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
             Frequently Asked Questions
           </h2>
 
-          <p className="w-[380px] font-body-l-medium font-[number:var(--body-l-medium-font-weight)] text-neutral-700 text-[length:var(--body-l-medium-font-size)] tracking-[var(--body-l-medium-letter-spacing)] leading-[var(--body-l-medium-line-height)] [font-style:var(--body-l-medium-font-style)] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
+          <p className="w-full md:w-[380px] font-body-l-medium font-[number:var(--body-l-medium-font-weight)] text-neutral-700 text-[length:var(--body-l-medium-font-size)] tracking-[var(--body-l-medium-letter-spacing)] leading-[var(--body-l-medium-line-height)] [font-style:var(--body-l-medium-font-style)] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
             Everything You Need to Know About <br />
             Working With Us
           </p>
@@ -82,8 +82,8 @@ export const FaqSection = (): JSX.Element => {
           </Button>
         </div>
 
-        <div className="w-[800px] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
-          <Accordion type="single" collapsible className="w-full space-y-6">
+        <div className="w-full md:w-[800px] translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:400ms]">
+          <Accordion type="single" collapsible className="w-full space-y-4 md:space-y-6">
             {faqData.map((faq, index) => (
               <AccordionItem
                 key={faq.id}
@@ -95,15 +95,15 @@ export const FaqSection = (): JSX.Element => {
                   } as React.CSSProperties
                 }
               >
-                <AccordionTrigger className="w-[800px] min-h-[88px] flex items-center justify-between gap-9 p-8 rounded-[20px] hover:no-underline hover:bg-gray-50 transition-all duration-200 border border-gray-200 bg-white shadow-sm [&[data-state=open]]:bg-gray-50 [&[data-state=open]]:shadow-md">
-                  <span className="flex-1 text-left font-heading-h5 font-[number:var(--heading-h5-font-weight)] text-[#010509] text-[length:var(--heading-h5-font-size)] tracking-[var(--heading-h5-letter-spacing)] leading-[var(--heading-h5-line-height)] [font-style:var(--heading-h5-font-style)]">
+                <AccordionTrigger className="w-full min-h-[72px] md:min-h-[88px] flex items-center justify-between gap-4 md:gap-9 p-5 md:p-8 rounded-[14px] md:rounded-[20px] hover:no-underline hover:bg-gray-50 transition-all duration-200 border border-gray-200 bg-white shadow-sm [&[data-state=open]]:bg-gray-50 [&[data-state=open]]:shadow-md">
+                  <span className="flex-1 text-left font-heading-h5 font-[number:var(--heading-h5-font-weight)] text-[#010509] text-base md:text-[length:var(--heading-h5-font-size)] tracking-normal md:tracking-[var(--heading-h5-letter-spacing)] leading-6 md:leading-[var(--heading-h5-line-height)] [font-style:var(--heading-h5-font-style)]">
                     {faq.question}
                   </span>
-                  <ChevronRightIcon className="w-[33px] h-6 transition-transform duration-200 text-gray-500 [&[data-state=open]]:rotate-90" />
+                  <ChevronRightIcon className="w-6 md:w-[33px] h-6 transition-transform duration-200 text-gray-500 [&[data-state=open]]:rotate-90" />
                 </AccordionTrigger>
-                <AccordionContent className="pb-0 bg-white border-l border-r border-b border-gray-200 rounded-b-[20px] mx-0">
-                  <div className="px-8 pb-6 pt-2">
-                    <p className="font-body-l-medium font-[number:var(--body-l-medium-font-weight)] text-neutral-600 text-[length:var(--body-l-medium-font-size)] tracking-[var(--body-l-medium-letter-spacing)] leading-[var(--body-l-medium-line-height)] [font-style:var(--body-l-medium-font-style)]">
+                <AccordionContent className="pb-0 bg-white border-l border-r border-b border-gray-200 rounded-b-[14px] md:rounded-b-[20px] mx-0">
+                  <div className="px-5 md:px-8 pb-5 md:pb-6 pt-2">
+                    <p className="font-body-l-medium font-[number:var(--body-l-medium-font-weight)] text-neutral-600 text-sm md:text-[length:var(--body-l-medium-font-size)] tracking-normal md:tracking-[var(--body-l-medium-letter-spacing)] leading-6 md:leading-[var(--body-l-medium-line-height)] [font-style:var(--body-l-medium-font-style)]">
                       {faq.answer}
                     </p>
                   </div>

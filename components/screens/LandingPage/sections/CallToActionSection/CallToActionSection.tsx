@@ -22,54 +22,22 @@ export const CallToActionSection = (): JSX.Element => {
   };
 
   return (
-    <section className="relative w-full py-20 bg-[#010509] overflow-hidden">
-      {/* Digital Background Effect */}
-      <div className="absolute inset-0 bg-[#010509]">
-        {/* Subtle blue glow effects */}
-        <div className="absolute top-1/4 left-1/4 w-64 h-64 bg-[#1170B9]/10 rounded-full blur-3xl animate-pulse-slow"></div>
-        <div className="absolute bottom-1/3 right-1/3 w-48 h-48 bg-[#1170B9]/10 rounded-full blur-3xl animate-pulse-medium"></div>
-        
-        {/* Grid pattern overlay */}
-        <div className="absolute inset-0 opacity-5">
-          <div className="w-full h-full bg-gradient-to-r from-transparent via-[#1170B9]/5 to-transparent animate-grid-shift grid-pattern" />
-        </div>
+    <section className="relative w-full py-20 overflow-hidden">
+      {/* Background image */}
+      <div className="absolute inset-0 -z-10">
+        <img
+          src="/images/video.jpg"
+          alt="CTA background"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-black/40 sm:bg-black/45 md:bg-black/50" />
       </div>
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto px-8 text-center">
         <div className="translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:0ms]">
-          {/* Video Thumbnail */}
-          <div className="relative mb-12 group cursor-pointer" onClick={handleVideoClick}>
-            <div className="relative w-full max-w-4xl mx-auto aspect-video bg-black/60 rounded-2xl overflow-hidden border border-[#1170B9]/30 hover:border-[#1170B9]/60 transition-all duration-300 hover:scale-[1.02]">
-              {/* Video Placeholder */}
-              <div className="absolute inset-0 bg-gradient-to-br from-[#1170B9]/20 to-[#0d5a9d]/20 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-20 h-20 bg-[#1170B9]/30 rounded-full flex items-center justify-center mb-4 mx-auto group-hover:scale-110 transition-transform duration-300 hover-glow">
-                    <svg className="w-8 h-8 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z"/>
-                    </svg>
-                  </div>
-                  <p className="text-white/80 text-sm font-inter">Click to play demo video</p>
-                </div>
-              </div>
-              
-              {/* Video Controls Overlay */}
-              <div className="absolute bottom-4 left-4 right-4 bg-black/70 rounded-lg p-3 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <div className="flex items-center justify-between text-white text-sm font-inter">
-                  <span>LoleLink Platform Demo</span>
-                  <span>2:45</span>
-                </div>
-                <div className="w-full bg-white/20 rounded-full h-1 mt-2">
-                  <div className="bg-[#1170B9] h-1 rounded-full w-1/3"></div>
-                </div>
-              </div>
-
-              {/* Play button glow effect */}
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="w-24 h-24 bg-[#1170B9]/20 rounded-full blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-              </div>
-            </div>
-          </div>
+          {/* Removed video thumbnail; background image used instead */}
+          <div className="mb-12" />
 
           {/* Heading */}
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:200ms] font-sora">
@@ -81,26 +49,21 @@ export const CallToActionSection = (): JSX.Element => {
             Try our live demo and discover how LoleLink can transform your business operations with AI-powered automation.
           </p>
 
-          {/* CTA Buttons */}
-          <div className="flex flex-col sm:flex-row gap-6 justify-center items-center translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
+          {/* CTA Button */}
+          <div className="flex justify-center items-center translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:600ms]">
             <button 
               onClick={handleStartTrial}
-              className="px-8 py-4 bg-[#1170B9] text-white font-semibold rounded-lg hover:bg-[#0d5a9d] transition-all duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1 active:scale-95 flex items-center gap-2 font-inter animate-button-glow"
+              className="relative px-8 py-3 bg-[#010509] border border-[#1170B9] text-white font-semibold rounded-lg group overflow-hidden transition-all duration-300 hover:shadow-[0_0_20px_rgba(17,112,185,0.4)] font-['Inter']"
             >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h1m4 0h1m-6 4h.01M15 14h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-              </svg>
-              Start Free Trial
-            </button>
-            
-            <button 
-              onClick={handleWatchDemo}
-              className="btn-digital px-8 py-4 border border-[#1170B9] text-white font-semibold rounded-lg hover:bg-[#1170B9]/10 transition-all duration-300 active:scale-95 flex items-center gap-2 font-inter"
-            >
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-              </svg>
-              Watch Full Demo
+              {/* Fading lines like Sign Up */}
+              <div className="absolute left-0 top-1/2 w-8 h-px transform -translate-y-1/2 opacity-60 group-hover:opacity-100 group-hover:-left-4 transition-all duration-500">
+                <div className="w-full h-full bg-gradient-to-r from-transparent via-[#1170B9] to-[#1170B9]" />
+              </div>
+              <div className="absolute right-0 top-1/2 w-8 h-px transform -translate-y-1/2 opacity-60 group-hover:opacity-100 group-hover:-right-4 transition-all duration-500">
+                <div className="w-full h-full bg-gradient-to-l from-transparent via-[#1170B9] to-[#1170B9]" />
+              </div>
+              Start
+              <div className="absolute inset-0 border border-transparent group-hover:border-[#1170B9] rounded-lg transition-all duration-300 opacity-0 group-hover:opacity-100" />
             </button>
           </div>
 

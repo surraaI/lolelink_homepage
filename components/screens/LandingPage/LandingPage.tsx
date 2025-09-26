@@ -54,8 +54,8 @@ const DigitalBackground = () => {
     }
 
     const animate = () => {
-      ctx.fillStyle = '#010509';
-      ctx.fillRect(0, 0, canvas.width, canvas.height);
+      // Clear the canvas to keep the background image visible
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       lines.forEach(line => {
         // Move line downward
@@ -90,7 +90,7 @@ const DigitalBackground = () => {
     <canvas
       ref={canvasRef}
       className="absolute inset-0 w-full h-full pointer-events-none"
-      style={{ background: '#010509' }}
+      style={{ background: 'transparent' }}
     />
   );
 };
@@ -134,7 +134,17 @@ export const LandingPage = (): JSX.Element => {
         data-model-id="25:28"
       >
       {/* Hero Section */}
-<section id="home" className="relative w-full min-h-screen flex items-center justify-center py-20 pt-48 bg-[#010509] overflow-hidden">
+<section id="home" className="relative w-full min-h-screen flex items-center justify-center py-20 pt-48 overflow-hidden">
+  {/* Background image */}
+  <div className="absolute inset-0 -z-10">
+    <img
+      src="/images/video.png"
+      alt="Hero background"
+      className="w-full h-full object-cover"
+    />
+    {/* Dark overlay for readability */}
+    <div className="absolute inset-0 bg-black/50 md:bg-black/60 lg:bg-black/70" />
+  </div>
   {/* Digital Background */}
   <DigitalBackground />
   
@@ -172,71 +182,68 @@ export const LandingPage = (): JSX.Element => {
         </AnimatedButton>
       </div>
 
-      {/* Image Composition */}
-      <div className="relative w-full max-w-7xl mx-auto h-[56rem] md:h-[64rem] mb-20">
-        {/* Main Center Image (Image 3.png) with Shine Effect */}
-        <div className="absolute left-1/2 top-[70%] transform -translate-x-1/2 -translate-y-1/2 z-0 relative">
-          {/* Radial Shine Effect - More natural and attractive */}
-          <div className="pointer-events-none absolute inset-0 z-0">
-            {/* Main radial glow */}
-            <div className="absolute inset-[-50px] bg-radial-gradient from-[#1170B9]/30 via-[#1170B9]/10 to-transparent rounded-lg blur-xl opacity-70"></div>
-            
-            {/* Secondary subtle glow */}
-            <div className="absolute inset-[-30px] bg-radial-gradient from-[#1170B9]/20 via-transparent to-transparent rounded-lg blur-lg opacity-50"></div>
-            
-            {/* Edge highlights */}
-            <div className="absolute -inset-4 border border-[#1170B9]/20 rounded-lg blur-sm"></div>
-          </div>
+      {/* Image Composition - same relative positions, responsive sizes */}
+      <div className="relative w-full max-w-7xl mx-auto -mt-6 sm:-mt-10 mb-12 md:mb-16 h-[40rem] sm:h-[48rem] md:h-[60rem]">
+          {/* Main Center Image (Image 3.png) with Shine Effect */}
+          <div className="absolute left-1/2 top-[58%] sm:top-[60%] md:top-[62%] transform -translate-x-1/2 -translate-y-1/2 z-0 relative">
+            {/* Radial Shine Effect - More natural and attractive */}
+            <div className="pointer-events-none absolute inset-0 z-0">
+              {/* Main radial glow */}
+              <div className="absolute inset-[-50px] bg-radial-gradient from-[#1170B9]/30 via-[#1170B9]/10 to-transparent rounded-lg blur-xl opacity-70"></div>
+              {/* Secondary subtle glow */}
+              <div className="absolute inset-[-30px] bg-radial-gradient from-[#1170B9]/20 via-transparent to-transparent rounded-lg blur-lg opacity-50"></div>
+              {/* Edge highlights */}
+              <div className="absolute -inset-4 border border-[#1170B9]/20 rounded-lg blur-sm"></div>
+            </div>
 
-          <img
-            src="/images/image-3.png"
-            alt="Main Platform Preview"
-            className="relative z-10 max-w-none w-[65vw] md:w-[60vw] h-auto shadow-[0_0_60px_rgba(17,112,185,0.6)] hover:shadow-[0_0_80px_rgba(17,112,185,0.8)] transition-all duration-500 transform hover:scale-105"
-          />
-
-          {/* Animated pulse effect */}
-          <div className="pointer-events-none absolute inset-0 z-5">
-            <div className="absolute inset-0 bg-radial-gradient from-[#1170B9]/40 via-transparent to-transparent rounded-lg animate-pulse-slow"></div>
-          </div>
-        </div>
-
-        {/* Bottom Left Corner of Main Image (Image 4.png) */}
-        <div className="absolute left-[3%] top-[85%] transform -translate-x-1/2 -translate-y-1/2 z-10">
-          <div className="relative">
-            {/* Mini shine effect for small images */}
-            <div className="pointer-events-none absolute -inset-4 bg-radial-gradient from-[#1170B9]/20 via-transparent to-transparent rounded-lg blur-md opacity-50"></div>
             <img
-              src="/images/image-4.png"
-              alt="Mobile App Preview"
-              className="relative z-10 w-56 md:w-64 h-auto shadow-[0_0_30px_rgba(17,112,185,0.4)] hover:shadow-[0_0_40px_rgba(17,112,185,0.6)] transition-all duration-300 transform hover:scale-105"
+              src="/images/image-3.png"
+              alt="Main Platform Preview"
+              className="relative z-10 max-w-none w-[80vw] md:w-[60vw] h-auto shadow-[0_0_60px_rgba(17,112,185,0.6)] hover:shadow-[0_0_80px_rgba(17,112,185,0.8)] transition-all duration-500 transform hover:scale-105"
             />
-          </div>
-        </div>
 
-        {/* Right Middle of Main Image (Image 5.png) */}
-        <div className="absolute right-[-8%] top-[70%] transform -translate-y-1/2 z-10">
-          <div className="relative">
-            {/* Mini shine effect for small images */}
-            <div className="pointer-events-none absolute -inset-4 bg-radial-gradient from-[#1170B9]/20 via-transparent to-transparent rounded-lg blur-md opacity-50"></div>
-            <img
-              src="/images/image-5.png"
-              alt="Dashboard Preview"
-              className="relative z-10 w-72 md:w-80 h-auto shadow-[0_0_30px_rgba(17,112,185,0.4)] hover:shadow-[0_0_40px_rgba(17,112,185,0.6)] transition-all duration-300 transform hover:scale-105"
-            />
+            {/* Animated pulse effect */}
+            <div className="pointer-events-none absolute inset-0 z-5">
+              <div className="absolute inset-0 bg-radial-gradient from-[#1170B9]/40 via-transparent to-transparent rounded-lg animate-pulse-slow"></div>
+            </div>
           </div>
-        </div>
 
-        {/* Subtle Connection Glows */}
-        <div className="absolute inset-0 pointer-events-none">
-          {/* Glow line from Image 4 to Image 3 */}
-          <div className="absolute left-[15%] top-[78%] w-48 h-px bg-gradient-to-r from-transparent via-[#1170B9]/30 to-transparent opacity-40 transform rotate-45 origin-bottom-left blur-sm"></div>
-          
-          {/* Glow line from Image 5 to Image 3 */}
-          <div className="absolute right-[12%] top-[68%] w-48 h-px bg-gradient-to-l from-transparent via-[#1170B9]/30 to-transparent opacity-40 transform -rotate-45 origin-top-right blur-sm"></div>
+          {/* Bottom Left Corner of Main Image (Image 4.png) */}
+          <div className="absolute left-[-6%] sm:left-[-2%] md:left-0 top-[78%] sm:top-[79%] md:top-[81%] transform -translate-x-[47px] sm:-translate-x-[39px] md:-translate-x-[31px] -translate-y-1/2 z-10">
+            <div className="relative origin-left scale-[0.6] sm:scale-[0.75] md:scale-[0.9] lg:scale-100">
+              {/* Mini shine effect for small images */}
+              <div className="pointer-events-none absolute -inset-4 bg-radial-gradient from-[#1170B9]/20 via-transparent to-transparent rounded-lg blur-md opacity-50"></div>
+              <img
+                src="/images/image-4.png"
+                alt="Mobile App Preview"
+                className="relative z-10 h-auto w-auto max-w-[14rem] sm:max-w-[16rem] md:max-w-none shadow-[0_0_30px_rgba(17,112,185,0.4)] hover:shadow-[0_0_40px_rgba(17,112,185,0.6)] transition-all duration-300"
+              />
+            </div>
+          </div>
+
+          {/* Right Middle of Main Image (Image 5.png) */}
+          <div className="absolute right-[-2%] sm:right-[-4%] md:right-[-6%] lg:right-[-10%] top-[62%] sm:top-[64%] md:top-[66%] transform -translate-y-1/2 z-10">
+            <div className="relative origin-right scale-[0.6] sm:scale-[0.75] md:scale-[0.9] lg:scale-100">
+              {/* Mini shine effect for small images */}
+              <div className="pointer-events-none absolute -inset-4 bg-radial-gradient from-[#1170B9]/20 via-transparent to-transparent rounded-lg blur-md opacity-50"></div>
+              <img
+                src="/images/image-5.png"
+                alt="Dashboard Preview"
+                className="relative z-10 h-auto w-auto max-w-[18rem] sm:max-w-[20rem] md:max-w-none shadow-[0_0_30px_rgba(17,112,185,0.4)] hover:shadow-[0_0_40px_rgba(17,112,185,0.6)] transition-all duration-300"
+              />
+            </div>
+          </div>
+
+          {/* Subtle Connection Glows */}
+          <div className="absolute inset-0 pointer-events-none">
+            {/* Glow line from Image 4 to Image 3 */}
+            <div className="absolute left-[15%] top-[78%] w-48 h-px bg-gradient-to-r from-transparent via-[#1170B9]/30 to-transparent opacity-40 transform rotate-45 origin-bottom-left blur-sm"></div>
+            {/* Glow line from Image 5 to Image 3 */}
+            <div className="absolute right-[12%] top-[68%] w-48 h-px bg-gradient-to-l from-transparent via-[#1170B9]/30 to-transparent opacity-40 transform -rotate-45 origin-top-right blur-sm"></div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
   {/* Floating Elements */}
   <div className="absolute top-20 left-20 w-32 h-32 bg-[#1170B9]/10 rounded-full animate-float-slow blur-sm"></div>
