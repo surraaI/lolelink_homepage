@@ -67,21 +67,7 @@ export const CallToActionSection = (): JSX.Element => {
             </button>
           </div>
 
-          {/* Trust Indicators */}
-          <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:800ms]">
-            <div className="text-center p-4 rounded-lg bg-[#1170B9]/5 border border-[#1170B9]/10 hover-lift">
-              <div className="text-2xl font-bold text-white mb-2 font-sora">No Credit Card</div>
-              <div className="text-gray-400 text-sm font-inter">Required for trial</div>
-            </div>
-            <div className="text-center p-4 rounded-lg bg-[#1170B9]/5 border border-[#1170B9]/10 hover-lift">
-              <div className="text-2xl font-bold text-white mb-2 font-sora">5 Minutes</div>
-              <div className="text-gray-400 text-sm font-inter">Setup time</div>
-            </div>
-            <div className="text-center p-4 rounded-lg bg-[#1170B9]/5 border border-[#1170B9]/10 hover-lift">
-              <div className="text-2xl font-bold text-white mb-2 font-sora">24/7 Support</div>
-              <div className="text-gray-400 text-sm font-inter">Always available</div>
-            </div>
-          </div>
+          {/* Trust Indicators removed per request */}
 
           {/* Additional Info */}
           <div className="mt-8 text-center translate-y-[-1rem] animate-fade-in opacity-0 [--animation-delay:1000ms]">

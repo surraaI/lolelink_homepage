@@ -209,7 +209,7 @@ export const LandingPage = (): JSX.Element => {
           </div>
 
           {/* Bottom Left Corner of Main Image (Image 4.png) */}
-          <div className="absolute left-[-6%] sm:left-[-2%] md:left-0 top-[78%] sm:top-[79%] md:top-[81%] transform -translate-x-[47px] sm:-translate-x-[39px] md:-translate-x-[31px] -translate-y-1/2 z-10">
+          <div className="absolute left-[-6%] sm:left-[-2%] md:left-0 top-[78%] sm:top-[79%] md:top-[81%] transform -translate-x-[67px] sm:-translate-x-[59px] md:-translate-x-[51px] -translate-y-1/2 z-10">
             <div className="relative origin-left scale-[0.6] sm:scale-[0.75] md:scale-[0.9] lg:scale-100">
               {/* Mini shine effect for small images */}
               <div className="pointer-events-none absolute -inset-4 bg-radial-gradient from-[#1170B9]/20 via-transparent to-transparent rounded-lg blur-md opacity-50"></div>
@@ -253,17 +253,17 @@ export const LandingPage = (): JSX.Element => {
         
 
       {/* What Is LoleLink Section */}
-      <section id="about" className="relative w-full py-20 bg-white">
+      <section id="about" className="relative w-full py-20 bg-black">
         <div className="w-full max-w-7xl mx-auto px-8">
           <ScrollAnimation animation="fade-up" delay={200}>
             <div className="text-center mb-16">
-              <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6 font-['Inter']">
+              <h2 className="text-4xl md:text-5xl font-bold text-white mb-6 font-['Inter']">
                 What Is LoleLink?
               </h2>
-              <h3 className="text-3xl md:text-4xl font-semibold text-gray-800 mb-8 font-['Inter']">
+              <h3 className="text-3xl md:text-4xl font-semibold text-white mb-8 font-['Inter']">
                 One Smart Platform to Run Your Entire Business
               </h3>
-              <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-12 font-['Inter']">
+              <p className="text-xl text-gray-300 max-w-4xl mx-auto mb-12 font-['Inter']">
                 LoleLink combines AI-powered automation, real-time insights, and integrated tools to replace manual work with smart, connected workflows.
               </p>
             </div>
@@ -273,57 +273,57 @@ export const LandingPage = (): JSX.Element => {
           <ScrollAnimation animation="fade-up" delay={400}>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center mb-16">
               <div className="space-y-6">
-                <div className="p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors hover-lift font-['Inter']">
+                <div className="p-6 bg-white/5 rounded-xl hover:bg-white/10 transition-colors hover-lift font-['Inter']">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 min-w-12 bg-blue-100 rounded-full flex items-center justify-center">
-                      <svg className="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/></svg>
+                    <div className="w-12 h-12 min-w-12 bg-blue-500/10 rounded-full flex items-center justify-center">
+                      <svg className="w-7 h-7 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1"/></svg>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">Finance</h4>
-                      <p className="text-gray-600 text-sm">Track income, expenses, and invoices in real time.</p>
+                      <h4 className="font-semibold text-white mb-1">Finance</h4>
+                      <p className="text-gray-300 text-sm">Track income, expenses, and invoices in real time.</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors hover-lift font-['Inter']">
+                <div className="p-6 bg-white/5 rounded-xl hover:bg-white/10 transition-colors hover-lift font-['Inter']">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 min-w-12 bg-green-100 rounded-full flex items-center justify-center">
-                      <svg className="w-7 h-7 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
+                    <div className="w-12 h-12 min-w-12 bg-green-500/10 rounded-full flex items-center justify-center">
+                      <svg className="w-7 h-7 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"/></svg>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">HR</h4>
-                      <p className="text-gray-600 text-sm">Manage teams, payroll, and leave requests effortlessly.</p>
+                      <h4 className="font-semibold text-white mb-1">HR</h4>
+                      <p className="text-gray-300 text-sm">Manage teams, payroll, and leave requests effortlessly.</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors hover-lift font-['Inter']">
+                <div className="p-6 bg-white/5 rounded-xl hover:bg-white/10 transition-colors hover-lift font-['Inter']">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 min-w-12 bg-purple-100 rounded-full flex items-center justify-center">
-                      <svg className="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                    <div className="w-12 h-12 min-w-12 bg-purple-500/10 rounded-full flex items-center justify-center">
+                      <svg className="w-7 h-7 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">Sales & CRM</h4>
-                      <p className="text-gray-600 text-sm">Follow leads, close deals faster.</p>
+                      <h4 className="font-semibold text-white mb-1">Sales & CRM</h4>
+                      <p className="text-gray-300 text-sm">Follow leads, close deals faster.</p>
                     </div>
                   </div>
                 </div>
 
-                <div className="p-6 bg-gray-50 rounded-xl hover:bg-gray-100 transition-colors hover-lift font-['Inter']">
+                <div className="p-6 bg-white/5 rounded-xl hover:bg-white/10 transition-colors hover-lift font-['Inter']">
                   <div className="flex items-start gap-4">
-                    <div className="w-12 h-12 min-w-12 bg-orange-100 rounded-full flex items-center justify-center">
-                      <svg className="w-7 h-7 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
+                    <div className="w-12 h-12 min-w-12 bg-orange-500/10 rounded-full flex items-center justify-center">
+                      <svg className="w-7 h-7 text-orange-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5H7a2 2 0 00-2 2v10a2 2 0 002 2h8a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"/></svg>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">Projects</h4>
-                      <p className="text-gray-600 text-sm">Assign tasks, track progress, meet deadlines.</p>
+                      <h4 className="font-semibold text-white mb-1">Projects</h4>
+                      <p className="text-gray-300 text-sm">Assign tasks, track progress, meet deadlines.</p>
                     </div>
                   </div>
                 </div>
               </div>
 
               <div className="relative mx-auto w-full max-w-xl">
-                <div className="absolute -inset-6 bg-gradient-to-tr from-blue-200/30 via-blue-100/20 to-transparent rounded-3xl blur-xl"></div>
+                <div className="absolute -inset-6 bg-gradient-to-tr from-blue-400/20 via-blue-300/10 to-transparent rounded-3xl blur-xl"></div>
                 <img
                   src="/images/image 163.png"
                   alt="LoleLink preview"
@@ -335,9 +335,9 @@ export const LandingPage = (): JSX.Element => {
           </ScrollAnimation>
 
           {/* AI Workflow Automation */}
-          <div className="text-center bg-gradient-to-r from-blue-50 to-purple-50 rounded-2xl p-12 font-['Inter']">
-            <h3 className="text-3xl font-bold text-gray-900 mb-4">AI Workflow Automation</h3>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+          <div className="text-center bg-gradient-to-r from-blue-900/20 to-purple-900/20 rounded-2xl p-12 font-['Inter']">
+            <h3 className="text-3xl font-bold text-white mb-4">AI Workflow Automation</h3>
+            <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Automate repetitive and time-consuming tasks with our AI-powered workflow automation
             </p>
           </div>
